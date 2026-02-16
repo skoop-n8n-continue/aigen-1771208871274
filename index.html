@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Hello World App</title>
+    <title>Red Hello World App</title>
     
     <!-- Cache Busting Meta Tags -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -12,12 +12,12 @@
 
     <style>
         :root {
-            --primary-green: #2e7d32;
-            --light-green: #e8f5e9;
-            --accent-green: #4caf50;
-            --dark-green: #1b5e20;
+            --primary-red: #c62828;
+            --light-red: #ffebee;
+            --accent-red: #ef5350;
+            --dark-red: #b71c1c;
             --text-color: #333;
-            --bg-color: #f0f4f0;
+            --bg-color: #fdfbfb;
         }
 
         body {
@@ -40,11 +40,11 @@
             max-width: 600px;
             width: 100%;
             text-align: center;
-            border-top: 5px solid var(--primary-green);
+            border-top: 5px solid var(--primary-red);
         }
 
         h1 {
-            color: var(--dark-green);
+            color: var(--dark-red);
             margin-bottom: 20px;
             font-size: 2.5rem;
         }
@@ -56,8 +56,8 @@
         }
 
         .quote-box {
-            background-color: var(--light-green);
-            border-left: 4px solid var(--accent-green);
+            background-color: var(--light-red);
+            border-left: 4px solid var(--accent-red);
             padding: 20px;
             margin-top: 30px;
             border-radius: 0 8px 8px 0;
@@ -74,14 +74,14 @@
 
         .quote-author {
             font-weight: bold;
-            color: var(--primary-green);
+            color: var(--primary-red);
             display: block;
             text-align: right;
         }
 
         .refresh-btn {
             margin-top: 20px;
-            background-color: var(--primary-green);
+            background-color: var(--primary-red);
             color: white;
             border: none;
             padding: 10px 20px;
@@ -92,7 +92,7 @@
         }
 
         .refresh-btn:hover {
-            background-color: var(--dark-green);
+            background-color: var(--dark-red);
         }
 
         /* Responsive adjustments */
@@ -110,7 +110,7 @@
 
     <div class="container">
         <h1>Hello World</h1>
-        <p class="hello-message">Welcome to your simple green-themed application.</p>
+        <p class="hello-message">Welcome to your simple red-themed application.</p>
         
         <div class="quote-box">
             <span id="quote-text" class="quote-text">Loading quote...</span>
