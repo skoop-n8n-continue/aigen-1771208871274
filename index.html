@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Hello World App</title>
+    <title>Purple Hello World App</title>
     
     <!-- Cache Busting Meta Tags -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -12,10 +12,11 @@
 
     <style>
         :root {
-            --primary-red: #c62828;
-            --light-red: #ffebee;
-            --accent-red: #ef5350;
-            --dark-red: #b71c1c;
+            /* Purple Theme Palette */
+            --primary-purple: #6a1b9a; /* Purple 800 */
+            --light-purple: #f3e5f5;   /* Purple 50 */
+            --accent-purple: #ab47bc;  /* Purple 400 */
+            --dark-purple: #4a148c;    /* Purple 900 */
             --text-color: #333;
             --bg-color: #fdfbfb;
         }
@@ -40,11 +41,11 @@
             max-width: 600px;
             width: 100%;
             text-align: center;
-            border-top: 5px solid var(--primary-red);
+            border-top: 5px solid var(--primary-purple);
         }
 
         h1 {
-            color: var(--dark-red);
+            color: var(--dark-purple);
             margin-bottom: 20px;
             font-size: 2.5rem;
         }
@@ -56,8 +57,8 @@
         }
 
         .quote-box {
-            background-color: var(--light-red);
-            border-left: 4px solid var(--accent-red);
+            background-color: var(--light-purple);
+            border-left: 4px solid var(--accent-purple);
             padding: 20px;
             margin-top: 30px;
             border-radius: 0 8px 8px 0;
@@ -74,14 +75,14 @@
 
         .quote-author {
             font-weight: bold;
-            color: var(--primary-red);
+            color: var(--primary-purple);
             display: block;
             text-align: right;
         }
 
         .refresh-btn {
             margin-top: 20px;
-            background-color: var(--primary-red);
+            background-color: var(--primary-purple);
             color: white;
             border: none;
             padding: 10px 20px;
@@ -92,7 +93,7 @@
         }
 
         .refresh-btn:hover {
-            background-color: var(--dark-red);
+            background-color: var(--dark-purple);
         }
 
         /* Responsive adjustments */
@@ -110,7 +111,7 @@
 
     <div class="container">
         <h1>Hello World</h1>
-        <p class="hello-message">Welcome to your simple red-themed application.</p>
+        <p class="hello-message">Welcome to your simple purple-themed application.</p>
         
         <div class="quote-box">
             <span id="quote-text" class="quote-text">Loading quote...</span>
