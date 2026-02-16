@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Hello World App</title>
+    
+    <!-- Cache Busting Meta Tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <style>
+        :root {
+            --primary-green: #2e7d32;
+            --light-green: #e8f5e9;
+            --accent-green: #4caf50;
+            --dark-green: #1b5e20;
+            --text-color: #333;
+            --bg-color: #f0f4f0;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            border-top: 5px solid var(--primary-green);
+        }
+
+        h1 {
+            color: var(--dark-green);
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .hello-message {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .quote-box {
+            background-color: var(--light-green);
+            border-left: 4px solid var(--accent-green);
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+        }
+
+        .quote-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .quote-author {
+            font-weight: bold;
+            color: var(--primary-green);
+            display: block;
+            text-align: right;
+        }
+
+        .refresh-btn {
+            margin-top: 20px;
+            background-color: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .refresh-btn:hover {
+            background-color: var(--dark-green);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hello World</h1>
+        <p class="hello-message">Welcome to your simple green-themed application.</p>
+        
+        <div class="quote-box">
+            <span id="quote-text" class="quote-text">Loading quote...</span>
+            <span id="quote-author" class="quote-author"></span>
+        </div>
+
+        <button id="new-quote-btn" class="refresh-btn">New Quote</button>
+    </div>
+
+    <script>
+        // Quotes data fetched from search
+        const quotes = [
+            {
+                text: "The biggest adventure you can take is to live the life of your dreams.",
+                author: "Oprah Winfrey"
+            },
+            {
+                text: "It does not matter how slowly you go as long as you do not stop.",
+                author: "Confucius"
+            },
+            {
+                text: "You will face many defeats in life, but never let yourself be defeated.",
+                author: "Maya Angelou"
+            },
+            {
+                text: "We must let go of the life we have planned, so as to accept the one that is waiting for us.",
+                author: "Joseph Campbell"
+            },
+            {
+                text: "There is no passion to be found playing small—in settling for a life that is less than the one you are capable of living.",
+                author: "Nelson Mandela"
+            }
+        ];
+
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quote = quotes[randomIndex];
+            
+            document.getElementById('quote-text').textContent = `"${quote.text}"`;
+            document.getElementById('quote-author').textContent = `- ${quote.author}`;
+        }
+
+        // Display a quote on load
+        document.addEventListener('DOMContentLoaded', displayRandomQuote);
+
+        // Button listener
+        document.getElementById('new-quote-btn').addEventListener('click', displayRandomQuote);
+    </script>
+</body>
+</html>
