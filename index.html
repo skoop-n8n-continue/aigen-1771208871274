@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yellow Hello World App</title>
+    <title>Orange Hello World App</title>
     
     <!-- Cache Busting Meta Tags -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -12,13 +12,13 @@
 
     <style>
         :root {
-            /* Yellow Theme Palette */
-            --primary-yellow: #f9a825; /* Yellow 800 */
-            --light-yellow: #fffde7;   /* Yellow 50 */
-            --accent-yellow: #ffee58;  /* Yellow 400 */
-            --dark-yellow: #f57f17;    /* Yellow 900 */
+            /* Orange Theme Palette */
+            --primary-orange: #ef6c00; /* Orange 800 */
+            --light-orange: #fff3e0;   /* Orange 50 */
+            --accent-orange: #ffb74d;  /* Orange 400 */
+            --dark-orange: #e65100;    /* Orange 900 */
             --text-color: #333;
-            --bg-color: #fdfbf7;
+            --bg-color: #fffaf0;
         }
 
         body {
@@ -41,11 +41,11 @@
             max-width: 600px;
             width: 100%;
             text-align: center;
-            border-top: 5px solid var(--primary-yellow);
+            border-top: 5px solid var(--primary-orange);
         }
 
         h1 {
-            color: var(--dark-yellow);
+            color: var(--dark-orange);
             margin-bottom: 20px;
             font-size: 2.5rem;
         }
@@ -57,8 +57,8 @@
         }
 
         .quote-box {
-            background-color: var(--light-yellow);
-            border-left: 4px solid var(--accent-yellow);
+            background-color: var(--light-orange);
+            border-left: 4px solid var(--accent-orange);
             padding: 20px;
             margin-top: 30px;
             border-radius: 0 8px 8px 0;
@@ -75,14 +75,14 @@
 
         .quote-author {
             font-weight: bold;
-            color: var(--primary-yellow);
+            color: var(--primary-orange);
             display: block;
             text-align: right;
         }
 
         .refresh-btn {
             margin-top: 20px;
-            background-color: var(--primary-yellow);
+            background-color: var(--primary-orange);
             color: white;
             border: none;
             padding: 10px 20px;
@@ -93,7 +93,7 @@
         }
 
         .refresh-btn:hover {
-            background-color: var(--dark-yellow);
+            background-color: var(--dark-orange);
         }
 
         /* Responsive adjustments */
@@ -111,7 +111,7 @@
 
     <div class="container">
         <h1>Hello World</h1>
-        <p class="hello-message">Welcome to your simple yellow-themed application.</p>
+        <p class="hello-message">Welcome to your simple orange-themed application.</p>
         
         <div class="quote-box">
             <span id="quote-text" class="quote-text">Loading quote...</span>
@@ -147,11 +147,14 @@
         ];
 
         function displayRandomQuote() {
+            const timestamp = Date.now();
             const randomIndex = Math.floor(Math.random() * quotes.length);
             const quote = quotes[randomIndex];
             
             document.getElementById('quote-text').textContent = `"${quote.text}"`;
             document.getElementById('quote-author').textContent = `- ${quote.author}`;
+            
+            console.log(`Quote loaded at ${timestamp}`);
         }
 
         // Display a quote on load
